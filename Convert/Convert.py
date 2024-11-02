@@ -10,12 +10,12 @@ def convert_single(file_folder, filename, start_page, max_pages, batch_multiplie
     fpath_in = file_folder / filename
     fpath_out = file_folder / "marker_output"
     model_lst = load_all_models()
-    max_pages = None
-    start_page = None
+    max_pages = max_pages
+    start_page = start_page
     metadata = None
     langs = None
-    batch_multiplier = 1
-    ocr_all_pages = False
+    batch_multiplier = batch_multiplier
+    ocr_all_pages = ocr_all_pages
 
     full_text, images, out_meta = convert_single_pdf(fpath_in, model_lst, max_pages, start_page, metadata, langs,
                                                      batch_multiplier, ocr_all_pages)
