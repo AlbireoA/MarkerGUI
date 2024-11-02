@@ -28,7 +28,7 @@ def convert_single(file_folder, filename, start_page, max_pages, batch_multiplie
 
     # Save the images to files
     for img_name, img in images.items():
-        img.save(fpath_out / f"{img_name}.png")
+        img.save(fpath_out / img_name)
 
     # Save the metadata to a JSON file
     with open(fpath_out / "output_metadata.json", "w", encoding="utf-8") as meta_file:
